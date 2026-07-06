@@ -1,0 +1,69 @@
+/* =====================================================================
+   Design Tokens — 設計系統的「單一事實來源」
+   所有顏色、字體、間距、動畫參數都定義在這裡。
+   要改整站風格，優先改這個檔案，不要在元件裡寫死 hex 值。
+   ===================================================================== */
+
+:root {
+  /* ---- 色彩：黑白為底 ---- */
+  --color-bg: #0a0a0a;          /* 主背景（近黑） */
+  --color-bg-elev: #141414;     /* 卡片 / 浮起表面 */
+  --color-line: #262626;        /* 分隔線 / 邊框 */
+  --color-fg: #f5f5f5;          /* 主要文字（近白） */
+  --color-fg-muted: #a3a3a3;    /* 次要文字（灰） */
+  --color-fg-faint: #6b6b6b;    /* 更淡的說明文字 */
+
+  /* ---- 跳色：科技橘 + 珊瑚紅（點綴用，不要大面積鋪） ---- */
+  --color-accent: #f2913d;          /* 科技橘 — 主要強調 */
+  --color-accent-2: #f25749;        /* 珊瑚紅 — 次要強調 / 漸層端點 */
+  --gradient-accent: linear-gradient(120deg, #f2913d 0%, #f25749 100%);
+
+  /* ---- 字體配對 ----
+     標題：Space Grotesk（幾何感、科技）
+     內文：Inter（可讀性高）
+     數字/標籤：JetBrains Mono（等寬、資料感） */
+  --font-display: 'Space Grotesk', 'Noto Sans TC', system-ui, sans-serif;
+  --font-body: 'Inter', 'Noto Sans TC', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* ---- 字級（type scale, 約 1.25 倍率） ---- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.6rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: clamp(2.5rem, 6vw, 4.5rem);
+  --text-hero: clamp(3rem, 12vw, 10rem);
+
+  /* ---- 間距（4/8 節奏） ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ---- 版面 ---- */
+  --container-max: 1200px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --radius: 14px;
+  --radius-sm: 8px;
+
+  /* ---- z-index 分層 ---- */
+  --z-bg: 0;
+  --z-content: 10;
+  --z-nav: 100;
+  --z-overlay: 1000;
+
+  /* ---- 動畫參數（全站統一節奏） ---- */
+  --dur-fast: 0.18s;
+  --dur-base: 0.32s;
+  --dur-slow: 0.6s;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* 進場：快進慢出 */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
